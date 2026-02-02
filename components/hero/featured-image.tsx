@@ -1,14 +1,14 @@
 import Image from "next/image";
 
-interface HeroImageProps {
+interface FeaturedImageProps {
   src: string;
   alt: string;
 }
 
-export function HeroImage({ src, alt }: HeroImageProps) {
+export function FeaturedImage({ src, alt }: FeaturedImageProps) {
   return (
     <div className="flex-1 flex justify-end">
-      <div className="relative w-[500px] h-[520px] rounded-[50px] overflow-hidden bg-[#1A0E0A]">
+      <div className="relative w-125 h-130 rounded-[50px] overflow-hidden bg-[#1A0E0A]">
         <Image
           src={src}
           alt={alt}

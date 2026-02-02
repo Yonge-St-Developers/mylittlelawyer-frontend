@@ -1,17 +1,17 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-interface HeroActionsProps {
+interface ActionsProps {
   primaryLabel: string;
   onPrimaryClick?: () => void;
   onScrollClick?: () => void;
 }
 
-export function HeroActions({
+export function Actions({
   primaryLabel,
   onPrimaryClick,
   onScrollClick,
-}: HeroActionsProps) {
+}: ActionsProps) {
   return (
     <div className="flex items-center gap-4 mt-12">
       <Button

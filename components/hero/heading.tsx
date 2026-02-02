@@ -1,10 +1,10 @@
 import { LegalIcon } from "@/components/icons/legal-icon";
 
-interface HeroHeadingProps {
+interface HeadingProps {
   title: string[];
 }
 
-export function HeroHeading({ title }: HeroHeadingProps) {
+export function Heading({ title }: HeadingProps) {
   return (
     <h1 className="font-header text-7xl leading-tight text-foreground">
       <span className="flex items-center gap-4">
