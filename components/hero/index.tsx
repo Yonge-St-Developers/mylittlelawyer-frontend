@@ -1,15 +1,23 @@
+"use client"
+
 import { Navbar } from "@/components/navbar";
 import { Heading } from "./heading";
 import { Actions } from "./actions";
 import { FeaturedImage } from "./featured-image";
+import { Footer } from "./footer";
 
 export { Heading } from "./heading";
 export { Actions } from "./actions";
 export { FeaturedImage } from "./featured-image";
+export { Footer } from "./footer";
+
+import { useRouter } from "next/navigation";
 
 export function Section() {
+  const router = useRouter();
+
   return (
-    <section className="min-h-screen bg-background">
+    <section className="h-screen bg-background relative overflow-hidden">
       <Navbar />
 
       <div className="flex items-center justify-between px-12 py-24 max-w-360 mx-auto">
@@ -22,11 +30,13 @@ export function Section() {
             feels like self-care
           </p>
 
-          <Actions primaryLabel="Get Started" />
+          <Actions primaryLabel="Get Started" onPrimaryClick={() => router.push("/login")} />
         </div>
 
         <FeaturedImage src="/gavel.jpg" alt="Legal gavel" />
       </div>
+
+      <Footer />
     </section>
   );
 }

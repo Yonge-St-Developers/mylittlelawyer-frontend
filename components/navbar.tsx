@@ -1,4 +1,5 @@
-import { Search, User } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -26,14 +27,11 @@ export function Navbar() {
           ))}
         </div>
       </div>
-      <div className="flex items-center gap-2">
-        <button className="p-2 hover:bg-muted rounded-full transition-colors">
-          <Search className="w-5 h-5" />
-        </button>
-        <button className="p-2 hover:bg-muted rounded-full transition-colors">
-          <User className="w-5 h-5" />
-        </button>
-      </div>
+      <Button asChild className="rounded-lg bg-accent text-accent-foreground hover:bg-accent/90">
+        <Link href="/login">
+          Login
+        </Link>
+      </Button>
     </nav>
   );
 }
