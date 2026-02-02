@@ -5,11 +5,14 @@ import "./globals.css";
 const fontHeader = Libre_Baskerville({
   variable: "--font-header",
   subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
 });
 
 const fontMain = IBM_Plex_Sans({
   variable: "--font-main",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 })
 
 const geistMono = Geist_Mono({
